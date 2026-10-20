@@ -4,15 +4,11 @@ The official [Spyglass](https://spyglass.so) plugin for Claude. Search brands an
 
 ## Install
 
-Install **Spyglass** from Claude's plugin directory, then authenticate when Claude opens the Spyglass OAuth flow. No API key needs to be copied into Claude.
+Once the directory listing is approved, install **Spyglass** from Claude's plugin directory, then authenticate when Claude opens the Spyglass OAuth flow. No API key needs to be copied into Claude.
 
 For local development:
 
-```bash
-git clone https://github.com/spyglass-so/claude-plugin.git
-claude plugin validate --strict ./claude-plugin
-claude --plugin-dir ./claude-plugin
-```
+Clone this repository using GitHub’s normal repository workflow. Then validate the local folder with `claude plugin validate --strict ./claude-plugin` and load it with `claude --plugin-dir ./claude-plugin`.
 
 In Claude Code, open `/mcp`, approve the `spyglass` server, and complete the Spyglass OAuth flow in your browser. Then run one of the prompts below. Claude should call a `spyglass` MCP tool and return competitive creative intelligence. Loading the plugin with `--plugin-dir` keeps the test isolated to that session.
 

@@ -1,8 +1,8 @@
 {
   "name": "spyglass",
   "displayName": "Spyglass",
-  "version": "1.0.0",
-  "description": "Search paid Meta ads, organic Instagram posts, and TikTok videos across brands and creators — with creative hooks, angles, personas, campaigns, collaborations, landing pages, and public comments.",
+  "version": "1.0.1",
+  "description": "Search paid Meta ads, organic Instagram posts, and TikTok videos across brands and creators \u2014 with creative hooks, angles, personas, campaigns, collaborations, landing pages, and public comments.",
   "author": {
     "name": "Spyglass",
     "email": "support@spyglass.so"
@@ -22,5 +22,7 @@
     "marketing",
     "creative-strategy",
     "mcp"
-  ]
+  ],
+  "privacyPolicyUrl": "https://spyglass.so/privacy",
+  "icon": "./.claude-plugin/icon.png"
 }

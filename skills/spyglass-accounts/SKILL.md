@@ -1,8 +1,10 @@
 ---
 name: spyglass-accounts
 description: Resolve brands and creators by name, handle, ID, or category brief, and index missing accounts into Spyglass. Use whenever a request names specific brands/creators, asks to discover competitors or influencers in a niche, or needs an account added before pulling its media, insights, campaigns, or landing pages.
-allowed-tools: mcp__spyglass__getAccounts, mcp__spyglass__addAccounts, mcp__spyglass__getAccountsIndexStatus, mcp__spyglass__searchTaxonomies
+allowed-tools: mcp__plugin_spyglass_spyglass__getAccounts, mcp__plugin_spyglass_spyglass__addAccounts, mcp__plugin_spyglass_spyglass__getAccountsIndexStatus, mcp__plugin_spyglass_spyglass__searchTaxonomies
 ---
+
+Use the connected Spyglass tools by their action names in Cowork; the plugin-scoped tool names in the front matter apply to Claude Code. Follow the live tool schema. Indexing instructions apply only if both `addAccounts` and `getAccountsIndexStatus` are available and the user has authorized indexing; otherwise explain the account is not currently indexed and continue with available accounts.
 
 # spyglass accounts
 

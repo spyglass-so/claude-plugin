@@ -1,8 +1,10 @@
 ---
 name: spyglass-media
 description: Find paid Meta ads, organic Instagram posts, and TikTok videos with creative metadata, hooks, angles, and performance signals. Use for competitive ad research, discovering winning creatives on a topic, or pulling a brand's ad library. Supports corpus semantic search, taxonomy filtering, and brand-level retrieval.
-allowed-tools: mcp__spyglass__getMedia, mcp__spyglass__searchTaxonomies, mcp__spyglass__getAccounts, mcp__spyglass__getBrandMediaInsights, mcp__spyglass__getBrandCampaigns
+allowed-tools: mcp__plugin_spyglass_spyglass__getMedia, mcp__plugin_spyglass_spyglass__searchTaxonomies, mcp__plugin_spyglass_spyglass__getAccounts, mcp__plugin_spyglass_spyglass__getBrandMediaInsights, mcp__plugin_spyglass_spyglass__getBrandCampaigns
 ---
+
+Use the connected Spyglass tools by their action names in Cowork; the plugin-scoped tool names in the front matter apply to Claude Code. Follow the live tool schema. Indexing instructions apply only if both `addAccounts` and `getAccountsIndexStatus` are available and the user has authorized indexing; otherwise explain the account is not currently indexed and continue with available accounts.
 
 # spyglass media
 
