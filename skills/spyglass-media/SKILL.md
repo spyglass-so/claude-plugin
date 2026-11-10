@@ -12,6 +12,15 @@ Search for paid Meta ads, organic Instagram posts, and TikTok videos across the 
 
 For a topic, product, or creative format, start with a short phrase in `getMedia` (`query` only), lock the product vertical with `searchTaxonomies` when neighboring categories bleed in, or discover the leading brands with `getAccounts` (`smart` mode) before opening their libraries. For a known brand or creator, resolve the account with `getAccounts`, check `getBrandMediaInsights` or `getBrandCampaigns` for high-level clusters, and pull `getMedia` by `accountId` with no `query`.
 
+
+## Indexed media vs live posts
+
+`getMedia` reads the Spyglass index. The account has to already be indexed, and the rows are already processed.
+
+Check the index first. Resolve the account, then call `getMedia`. If the account is not in the index, or `getMedia` by `accountId` returns no rows, and you know the Instagram handle, TikTok handle, or Facebook Ad Library page id, use the HTTP API `GET https://api.spyglass.so/v2/account/posts` instead of retrying `getMedia`.
+
+That call fetches and processes the posts live. The account does not need to be indexed. Expect about 10–30 seconds, and longer when `limit` spans more than one source page (Instagram 12, Instagram tagged up to 10, TikTok 10, Facebook Ad Library 30). `limit` defaults to 20 and maxes at 120. Send exactly one of `igUsername`, `tiktokUsername`, or `facebookAdLibraryId`. It is not an MCP tool. A valid request currently returns 501.
+
 ## 1. Pick the right mode before calling
 
 `getMedia` runs three different engines behind one tool. Mixing them returns a confident, wrong set.
